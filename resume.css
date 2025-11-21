@@ -1,0 +1,219 @@
+*, *::before, *::after { 
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+ } 
+
+body {
+    background-color: #ffffff; 
+    color: #000000;
+    margin: 0; 
+    padding: 0;
+ }
+header { 
+    background-color: #000000; 
+    color: #226666;
+    background-image: linear-gradient(to bottom, #FFFFFF, #226666); 
+    line-height: 400%;
+    text-indent: 1em;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+header a { 
+    text-decoration: none; 
+  }
+header a:link { 
+    color: #FFFFFF; 
+ }
+header a:visited { 
+    color: #FFFFFF; 
+}
+header a:hover { 
+    color: #90c7e3; 
+}
+nav { 
+    text-align: center;
+    padding: 0; 
+    font-size: 120%;
+    background-image: linear-gradient(to top, #FFFFFF, #226666);
+    margin-bottom: 1em;
+}
+nav ul { 
+    list-style-type: none; 
+    margin: 0;
+    padding-left: 0; 
+    font-size: 1.2em ; 
+}
+nav a { 
+    text-decoration: none;  
+}
+nav a:link { 
+    color: #000000; 
+}
+nav a:visited { 
+    color: #A52A2A 
+}
+nav a:hover { 
+    color: #A52A2A; 
+}
+
+h1 { 
+    margin-top: 0%; 
+    margin-bottom: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 0.5em; 
+    padding-bottom: 0.5em; 
+    letter-spacing: .25em; 
+}
+h2 { color: #000000;}
+.gradient-text {
+    background: linear-gradient(180deg, #ffffff, #226666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+dt { color: #226666; }
+.resort { color: #AA6C38; }
+body { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h1 { font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif }
+h2 { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #AA3838; }
+h3 { font-family: Verdana, Geneva, Tahoma, sans-serif;  } 
+main ul { 
+    list-style-image: url(marker.gif); 
+}
+footer {  
+    background-color: #FFFFFF; 
+    font-family: 'Times New Roman', Times, serif; 
+    text-align: center; 
+    font-size: 0.75em; 
+    font-style: italic; 
+    overflow: auto; 
+}
+.hello {
+    font-weight: bold;
+    text-align: center; 
+}
+.contact { 
+    font-size: 0.90em; 
+}
+
+#wrapper { 
+    background-color: #90C7E3; 
+    background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3); 
+}
+main { 
+    background-color: #FFFFFF; 
+    padding: 1px 20px 20px 20px; 
+    display: block; 
+    padding-left: 30px;
+    overflow: auto; 
+    background-image: linear-gradient(to bottom, #FFFFFF, #226666);
+}
+footer {
+    padding: 2em;
+}
+#homehero { 
+    height: 300px; 
+    background-image: url('together.jpg'); 
+    background-size: 100% 100%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#yurthero { 
+    height: 300px; 
+    background-image: url('yurt.jpg'); 
+    background-size: 100% 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;  
+}
+#trailhero { 
+    height: 300px; 
+    background-image: url('trail.jpg'); 
+    background-size: 100% 100%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+table { 
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td { 
+    border: 2px solid #3399CC; 
+    padding: 0.5em; 
+}
+td {
+    text-align: center;
+}
+.text {
+    text-align: left;
+}
+table tr:nth-of-type(odd) {
+    background-color: #F5FAFC; 
+}
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+input, textarea {
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 600px) {
+form {
+    width: 60%;
+    max-width: 30em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 6em 1fr;
+}
+input[type="submit"] {
+    grid-column: 2;
+    width: 9em;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        box-shadow: 3px 3px 3px #002171;
+    }
+    
+    @supports (display: grid) {
+     nav ul {
+            display: flex;
+            flex-direction: column;
+            padding-top: 1em;
+        }
+    .hero {
+            grid-area: hero;
+        }
+    header {
+            grid-area: header;
+        }
+    nav {
+            grid-area: nav;
+        }
+    main {
+            grid-area: main;
+        }
+    footer {
+            grid-area: footer;
+        }
+    #wrapper {
+            display: grid;
+            grid-template: 
+                "header header" auto
+                "nav hero" auto
+                "nav main" 1fr
+                "footer footer" auto
+                / 180px 1fr;
+        }  
+    }
+}
